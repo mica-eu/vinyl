@@ -26,9 +26,9 @@ $(function () {
 
         if (data.length != 0) {
           $msgLoading.hide();
-          $msgTxt.html('Encontramos ' + data.length + ' resultados.').show();
+          $msgTxt.html('Encontramos ' + data.info.num_results + ' resultados.').show();
 
-          data.forEach(function (track) {
+          data.tracks.forEach(function (track) {
             var $li = $('<li>')
             .addClass('track')
             .appendTo($results);
